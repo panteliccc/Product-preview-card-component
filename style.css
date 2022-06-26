@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --fontM:'Montserrat', sans-serif;
+}
+body {
+    font-family: 'Fraunces', serif;
+    background-color:var(--Cream);
+}
+.card {
+    display: flex;
+    align-items: stretch;
+    width: 700px;
+    background-color: var(--White);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;    line-height: 35px;
+}
+.card img {
+    width: 50%;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.card .info {
+    padding: 20px;
+}
+.card .info h2 {
+    color: var(--Darkgrayishblue);
+    font-weight: 500;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+.card .info h1.name {
+    color: var(--Verydarkblue);
+}
+.card .info p {
+    color: var(--Darkgrayishblue);
+    font-family: var(--fontM);
+    font-weight: 500;
+
+}
+.card .info .all-price {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.card .info .all-price .price {
+    color: var(--Darkcyan);
+}
+.card .info .all-price .old-price {
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+    font-size: 100%;
+    font-family: var(--fontM);
+}
+.card .info .btt-cart {
+    background-color: var(--Darkcyan);
+    font-family: var(--fontM);
+    color: var(--White);
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.card .info .btt-cart img {
+    width: 20px;
+}
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width:750px) {
+    .card {
+        flex-direction: column;
+        width: 80%;
+    }
+    .card img{ 
+        width: 100%;
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .card {
+        width: 90%;
+        line-height: 25px;
+    }
+    .card .name {
+        line-height: 35px;
+        font-size: 150%;
+    }
+}
